@@ -2,7 +2,10 @@
 
  {% block main_area %}
 
-     <h1>Blog {% if category %}<span class="badge rounded-pill bg-warning text-dark">{{ category }}</span>{% endif %}</h1>
+     <h1>Blog
+         {% if category %}<span class="badge bg-warning text-dark">{{ category }}</span>{% endif %}
+         {% if tag %}<span class="badge badge-light"><i class="fas fa-tag"></i>{{ tag }}</span>{% endif %}
+     </h1>
 
     {% if post_list.exists %}
 
@@ -28,9 +31,9 @@
 
                     <p class="card-text">{{ p.content | truncatewords:45 }}</p>
 
-                    {% if p.tag.exists %}
+                    {% if p.tags.exists %}
                         <i class="fas fa-tags"></i>
-                        {% for tag in p.tag.iterator %}
+                        {% for tag in p.tags.iterator %}
                             <a href="{{ tag.get_absolute_url }}"><span class="badge badge-pill badge-light">{{ tag }}</span></a>
                         {% endfor %}
                         <br/>

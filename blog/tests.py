@@ -22,7 +22,7 @@ class TestView(TestCase):
             category=self.category_programming,
             author=self.user_trump
         )
-        self.post_001.tag.add(self.tag_hello)
+        self.post_001.tags.add(self.tag_hello)
 
         self.post_002 = Post.objects.create(
             title='두 번째 포스트입니다.',
@@ -36,8 +36,8 @@ class TestView(TestCase):
             content='category가 없을 수도 있죠',
             author=self.user_psmin
         )
-        self.post_003.tag.add(self.tag_python_kor)
-        self.post_003.tag.add(self.tag_python)
+        self.post_003.tags.add(self.tag_python_kor)
+        self.post_003.tags.add(self.tag_python)
 
     def navbar_test(self, soup):
         navbar = soup.nav
@@ -155,6 +155,22 @@ class TestView(TestCase):
 
         main_area = soup.find('div', id="main-area")
         self.assertIn(self.category_programming.name, main_area.text)
+        self.assertIn(self.post_001.title, main_area.text)
+        self.assertNotIn(self.post_002.title, main_area.text)
+        self.assertNotIn(self.post_003.title, main_area.text)
+
+    def test_tag_page(self):
+        response = self.client.get(self.tag_hello.get_absolute_url())
+        self.assertEqual(response.status_code, 200)
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        self.navbar_test(soup)
+        self.category_card_test(soup)
+
+        self.assertIn(self.tag_hello.name, soup.h1.text)
+
+        main_area = soup.find('div', id='main-area')
+        self.assertIn(self.tag_hello.name, main_area.text)
         self.assertIn(self.post_001.title, main_area.text)
         self.assertNotIn(self.post_002.title, main_area.text)
         self.assertNotIn(self.post_003.title, main_area.text)
