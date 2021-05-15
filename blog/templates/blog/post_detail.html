@@ -40,6 +40,15 @@
         <!-- Post content-->
         <p class="lead">{{ post.content }}</p>
 
+        {% if post.tag.exists %}
+            <i class="fas fa-tags"></i>
+            {% for tag in post.tag.all %}
+                <a href="{{ tag.get_absolute_url }}" class="badge badge-light">{{ tag }}</a>
+            {% endfor %}
+            <br/>
+            <br/>
+        {% endif %}
+
         {% if post.file_upload %}
             <a href="{{ post.file_upload.url }}" class="btn btn-outline-dark" role="button">
                 Download:
