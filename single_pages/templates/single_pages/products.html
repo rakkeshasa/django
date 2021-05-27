@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> 관련 제품군 살펴보기 </title>
+
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
+    <script src="https://kit.fontawesome.com/726bbd6862.js" crossorigin="anonymous"></script>
+</head>
+
+{% include 'blog/navbar.html' %}
+
+<section>
+    <div class="container mt-4">
+        <h1>관련 제품군 살펴보기</h1>
+    </div>
+</section>
+
+
+<section class="bg-light margin-for-main">
+    <div class="container" >
+        <div class="row">
+            <div class="col-12">
+                <h1>CPU</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" data-toggle="modal" data-target="#intelCPU">
+                    <img class="card-img-top" height="265px" src="{% static 'single_pages/images/intelCPU.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">Intel CPU</h5>
+                        <p>상위 인기순 40위 Intel CPU 상품군 및 가격</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card" data-toggle="modal" data-target="#amdCPU">
+                    <img class="card-img-top" height="265px" src="{% static 'single_pages/images/amdCPU2.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">AMD CPU</h5>
+                        <p>상위 인기순 40위 AMD CPU 상품군 및 가격</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>RAM</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card" data-toggle="modal" data-target="#RAM">
+                <img class="card-img-top" height="265px" src="{% static 'single_pages/images/ram.jpg' %}">
+                <div class="card-body">
+                    <h5 class="card-title">RAM</h5>
+                    <p>상위 인기순 40위 RAM 상품군 및 가격</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<section class="bg-light margin-for-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>VGA 그래픽카드</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" data-toggle="modal" data-target="#NVIDIA">
+                    <img class="card-img-top" height="265px" src="{% static 'single_pages/images/nvidia2.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">Nvidia 그래픽카드</h5>
+                        <p>상위 인기순 40위 그래픽카드 상품군 및 가격</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card" data-toggle="modal" data-target="#RADEON">
+                    <img class="card-img-top" height="265px" src="{% static 'single_pages/images/radeon.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">Radeon 그래픽카드</h5>
+                        <p>상위 인기순 40위 그래픽카드 상품군 및 가격</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>저장장치</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card" data-toggle="modal" data-target="#HDD">
+                <img class="card-img-top" height="265px" src="{% static 'single_pages/images/hdd.jpg' %}">
+                <div class="card-body">
+                    <h5 class="card-title">HDD 하드디스크</h5>
+                    <p>상위 인기순 40위 하드디스크 상품군 및 가격</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card" data-toggle="modal" data-target="#SSD">
+                <img class="card-img-top" height="265px" src="{% static 'single_pages/images/ssd.jpg' %}">
+                <div class="card-body">
+                    <h5 class="card-title">SSD 스스디</h5>
+                    <p>상위 인기순 40위 SSD 상품군 및 가격</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<section class="bg-light margin-for-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>MB 메인보드</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" data-toggle="modal" data-target="#intelMB">
+                    <img class="card-img-top" height="265px" src="{% static 'single_pages/images/intelMB.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">인텔용 메인보드</h5>
+                        <p>상위 인기순 40위 인텔용 메인보드 상품군 및 가격</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card" data-toggle="modal" data-target="#amdMB">
+                    <img class="card-img-top" height="265px" src="{% static 'single_pages/images/amdMB.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">암드용 메인보드</h5>
+                        <p>상위 인기순 40위 암드용 메인보드 상품군 및 가격</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="intelCPU" tabindex="-1" role="dialog" aria-labelledby="intelCPUModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="intelCPUModalLabel">Intel CPU 상위 40위 살펴보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% for p in intel %}
+                        <h3>{{ p }}</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="RAM" tabindex="-1" role="dialog" aria-labelledby="RAMModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="RAMModalLabel">RAM 상위 40위 살펴보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% for p in ram %}
+                        <h3>{{ p }}</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="amdCPU" tabindex="-1" role="dialog" aria-labelledby="amdCPUModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="amdCPUModalLabel">AMD CPU 상위 40위 살펴보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% for p in amd %}
+                        <h3>{{ p }}</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="NVIDIA" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">NVIDIA 그래픽카드 상위 40위 살펴보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% for p in nvidia %}
+                        <h3>{{ p }}</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="RADEON" tabindex="-1" role="dialog" aria-labelledby="RADEONModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="RADEONModalLabel">RADEON 그래픽카드 상위 40위 살펴보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% for p in radeon %}
+                        <h3>{{ p }}</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="HDD" tabindex="-1" role="dialog" aria-labelledby="HDDModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="HDDModalLabel">하드디스크 상위 40위 살펴보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% for p in hdd %}
+                        <h3>{{ p }}</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="SSD" tabindex="-1" role="dialog" aria-labelledby="SSDModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="SSDModalLabel">SSD 상위 40위 살펴보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% for p in ssd %}
+                        <h3>{{ p }}</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="intelMB" tabindex="-1" role="dialog" aria-labelledby="intelMBModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="intelMBModalLabel">인텔 메인보드 상위 40위 살펴보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% for p in intelMB %}
+                        <h3>{{ p }}</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="amdMB" tabindex="-1" role="dialog" aria-labelledby="amdMBModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="amdMBModalLabel">암드 메인보드 상위 40위 살펴보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% for p in amdMB %}
+                        <h3>{{ p }}</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    {% include 'blog/footer.html' %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
