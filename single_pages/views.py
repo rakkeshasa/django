@@ -3,7 +3,7 @@ from blog.models import Post
 from single_pages.models import IntelCpu, amdCpu, nvidia, ram, radeon, hdd, ssd, intelMB, amdMB
 
 def landing(request):
-    recent_posts = Post.objects.order_by('-pk')[:3]
+    recent_posts = Post.objects.order_by('pk')[:3]
 
     return render(
         request,
